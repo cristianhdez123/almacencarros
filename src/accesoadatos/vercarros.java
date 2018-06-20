@@ -11,7 +11,7 @@ import java.util.logging.*;
 
 public class vercarros extends javax.swing.JFrame {
 DefaultTableModel modeloTabla;
-conexion.conexion con = new conexion.conexion();
+conexion cn = new conexion();
 
   
     public vercarros() {
@@ -30,7 +30,7 @@ conexion.conexion con = new conexion.conexion();
     {
     try{
         String sql = "Select codigo, marca, color, modelo, fecha, tipo, kilometraje from ususarios";
-        PreparedStatement us = con.conexion().prepareStatement(sql);
+        PreparedStatement us = cn.UID().prepareStatement(sql);
         ResultSet res = us.executeQuery();
         Object datos []=new Object[7];
         while (res.next()){

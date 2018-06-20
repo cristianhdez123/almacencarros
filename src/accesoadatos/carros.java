@@ -1,6 +1,5 @@
 package accesoadatos;
 
-import conexion.conexion;
 import java.sql.ResultSet;
 
 public class carros {
@@ -9,19 +8,19 @@ public class carros {
     conexion cn = new conexion();
 
     public void insertar(String codigo, String marca, String color, String modelo, String fecha, String tipo, String kilometraje) {
-        cn.UID("INSERT INTO clientes(codigo,marca,color,modelo,fecha,tipo,kilometraje) VALUES('" + codigo + "','" + marca + "','" + color + "','" + modelo + "','" + fecha + "','" + tipo + "','" + kilometraje + "')");
+        cn.UID("INSERT INTO carros(codigo,marca,color,modelo,fecha,tipo,kilometraje) VALUES('" + codigo + "','" + marca + "','" + color + "','" + modelo + "','" + fecha + "','" + tipo + "','" + kilometraje + "')");
     }
    
     public void modificar(String codigo, String marca, String color, String modelo, String fecha, String tipo, String kilometraje) {
-        cn.UID("UPDATE clientes SET apellido1='" + marca + "',color'" + color + "',modelo='" + modelo + "',fecha='" + fecha + "',tipo='" + tipo + "',kilometraje='" + kilometraje + "' WHERE codigo='" + codigo + "'");
+        cn.UID("UPDATE carros SET apellido1='" + marca + "',color'" + color + "',modelo='" + modelo + "',fecha='" + fecha + "',tipo='" + tipo + "',kilometraje='" + kilometraje + "' WHERE codigo='" + codigo + "'");
     }
 
     public void eliminar(String codigo) {
-        cn.UID("DELETE FROM clientes WHERE codigo='" + codigo + "'");
+        cn.UID("DELETE FROM carros WHERE codigo='" + codigo + "'");
     }
 
     public ResultSet buscar(String codigo) {
-        return (cn.getValores("SELECT * FROM clientes WHERE codigo='" + codigo + "'"));
+        return (cn.getValores("SELECT * FROM carros WHERE codigo='" + codigo + "'"));
     }
 
     public ResultSet contarRegistros() {
@@ -33,6 +32,6 @@ public class carros {
     }
 
     public ResultSet llenarTabla() {
-        return (cn.getValores("SELECT codigo,marca,modelo,kilometraje FROM clientes"));
+        return (cn.getValores("SELECT codigo,marca,modelo,kilometraje FROM carros"));
     }
 }

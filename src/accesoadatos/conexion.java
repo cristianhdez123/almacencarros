@@ -1,4 +1,4 @@
-package conexion;
+package accesoadatos;
 
 //Recuerde importar la biblioteca de conexiónnn
 import java.sql.Connection;
@@ -11,12 +11,12 @@ import javax.swing.JOptionPane;
 public class conexion {
     
     private String url = "jdbc:mysql://localhost:3306/baseDeDatos";
-    private String login = "root"; //Administrador de MySQL
+    private String login = "root"; 
     private String password = "12345";
     private Connection cnx = null;
     private Statement sttm = null;
     private ResultSet rst = null;
-    //método para Update, Insert, Delete
+   
     public void UID(String sql) {
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -31,13 +31,13 @@ public class conexion {
             System.exit(1);
         }
     }
-    //Método para Consultar
+    
     public ResultSet getValores(String sql) {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             cnx = DriverManager.getConnection(url, login, password);
             sttm = cnx.createStatement();
-            rst = sttm.executeQuery(sql);  //resultset
+            rst = sttm.executeQuery(sql);  
         } catch (ClassNotFoundException c) {
             JOptionPane.showMessageDialog(null, "ERROR: " + c.getMessage());
             System.exit(1);
