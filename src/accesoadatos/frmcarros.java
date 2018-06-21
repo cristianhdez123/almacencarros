@@ -72,7 +72,6 @@ public class frmcarros extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         ftxtFechaNacimiento = new javax.swing.JFormattedTextField();
         jLabel7 = new javax.swing.JLabel();
-        ftxtCelular = new javax.swing.JFormattedTextField();
         jLabel8 = new javax.swing.JLabel();
         rdbMasculino = new javax.swing.JRadioButton();
         rdbFemenino = new javax.swing.JRadioButton();
@@ -83,6 +82,7 @@ public class frmcarros extends javax.swing.JFrame {
         btnModificar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         btnver = new javax.swing.JButton();
+        ftxtCelular = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Administración de clientes");
@@ -139,19 +139,6 @@ public class frmcarros extends javax.swing.JFrame {
 
         jLabel7.setText("Kilometraje:");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 60, -1));
-
-        try {
-            ftxtCelular.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("7###-####")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-        ftxtCelular.setEnabled(false);
-        ftxtCelular.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ftxtCelularActionPerformed(evt);
-            }
-        });
-        getContentPane().add(ftxtCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 260, 110, -1));
 
         jLabel8.setText("Tipo:");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
@@ -228,6 +215,7 @@ public class frmcarros extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnver, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 460, -1, -1));
+        getContentPane().add(ftxtCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 260, 130, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -404,10 +392,6 @@ public class frmcarros extends javax.swing.JFrame {
         Bloquear();
     }//GEN-LAST:event_formFocusGained
 
-    private void ftxtCelularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ftxtCelularActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ftxtCelularActionPerformed
-
     private void ftxtFechaNacimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ftxtFechaNacimientoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ftxtFechaNacimientoActionPerformed
@@ -437,7 +421,7 @@ public class frmcarros extends javax.swing.JFrame {
     private javax.swing.JButton btnNuevo;
     private javax.swing.ButtonGroup btngSexo;
     private javax.swing.JButton btnver;
-    private javax.swing.JFormattedTextField ftxtCelular;
+    private javax.swing.JTextField ftxtCelular;
     private javax.swing.JFormattedTextField ftxtFechaNacimiento;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
