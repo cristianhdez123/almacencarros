@@ -129,7 +129,7 @@
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Alumnos:Carcamo Colocho,Kevin Josue&#xa;        Hernandez Moran,Christian Antonio"/>
+            <Property name="text" type="java.lang.String" value="Alumnos:Carcamo Colocho,Kevin Josue&#xa;        Hernandez Moran,Christian Antonio&#xa;&#x9;Borja Valencia, Jos&#xe9; Edgardo"/>
           </Properties>
         </Component>
       </SubComponents>

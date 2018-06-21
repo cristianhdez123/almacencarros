@@ -18,6 +18,7 @@ public class INICIODESESION extends javax.swing.JFrame {
      */
     public INICIODESESION() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -88,7 +89,7 @@ public class INICIODESESION extends javax.swing.JFrame {
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Alumnos:Carcamo Colocho,Kevin Josue\n        Hernandez Moran,Christian Antonio");
+        jTextArea1.setText("Alumnos:Carcamo Colocho,Kevin Josue\n        Hernandez Moran,Christian Antonio\n\tBorja Valencia, José Edgardo");
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 360, 60));

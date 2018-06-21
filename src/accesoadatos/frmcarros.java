@@ -22,6 +22,7 @@ public class frmcarros extends javax.swing.JFrame {
 
     public frmcarros() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     private void Bloquear(){
@@ -127,6 +128,7 @@ public class frmcarros extends javax.swing.JFrame {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        ftxtFechaNacimiento.setText("");
         ftxtFechaNacimiento.setEnabled(false);
         ftxtFechaNacimiento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,7 +151,7 @@ public class frmcarros extends javax.swing.JFrame {
                 ftxtCelularActionPerformed(evt);
             }
         });
-        getContentPane().add(ftxtCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, 110, -1));
+        getContentPane().add(ftxtCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 260, 110, -1));
 
         jLabel8.setText("Tipo:");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
@@ -233,7 +235,7 @@ public class frmcarros extends javax.swing.JFrame {
     private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
         // TODO add your handling code here:
         rs = null;
-        //método en clase Clientes
+        
         rs = cl.contarRegistros();
         try {
             while (rs.next()) {
@@ -325,7 +327,7 @@ public class frmcarros extends javax.swing.JFrame {
                         JOptionPane.showMessageDialog(rootPane, "Debe llenar el campo kilometraje!!", "AVISO DEL SISTEMA", 2);
                         this.ftxtCelular.requestFocus();
                     } else {
-                        //atentos, el sexo está con radio buttons
+                        
                         if (rdbMasculino.isSelected()==true){
                           cl.insertar(this.txtCodigoCliente.getText(), this.txtPrimerApellido.getText().toUpperCase(), this.txtSegundoApellido.getText().toUpperCase(), this.txtNombre.getText().toUpperCase(), this.ftxtFechaNacimiento.getText(), "M", this.ftxtCelular.getText()); }
                         else{

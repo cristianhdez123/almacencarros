@@ -10,9 +10,9 @@ import javax.swing.JOptionPane;
 
 public class conexion {
     
-    private String url = "jdbc:mysql://localhost:3306/baseDeDatos";
+    private String url = "jdbc:mysql://localhost:3306/basedeCarros";
     private String login = "root"; 
-    private String password = "12345";
+    private String password = "";
     private Connection cnx = null;
     private Statement sttm = null;
     private ResultSet rst = null;
