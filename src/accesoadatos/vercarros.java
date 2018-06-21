@@ -10,15 +10,15 @@ import java.sql.*;
 import java.util.logging.*;
 
 public class vercarros extends javax.swing.JFrame {
-DefaultTableModel modeloTabla;
+DefaultTableModel modelotabla;
 conexion cnx = new conexion();
 
   
     public vercarros() {
         initComponents();
         
-      modeloTabla = new DefaultTableModel (null, getColumnas());
-      setFilas;
+      modelotabla = new DefaultTableModel (null, getColumnas());
+      setFilas();
         
     }
     private String[] getColumnas(){
@@ -30,14 +30,14 @@ conexion cnx = new conexion();
     {
     try{
         String sql = "Select codigo, marca, color, modelo, fecha, tipo, kilometraje from carros";
-        PreparedStatement us = cnx.conexion().prepareStatement(sql);
+        PreparedStatement us = cnx.prepareStatement(sql);
         ResultSet res = us.executeQuery();
         Object datos []=new Object[7];
         while (res.next()){
             for (int i=0;i<7;i++){
             datos[i]=res.getObject(i+1);
             }
-            modeloTabla.addRow(datos);
+            modelotabla.addRow(datos);
         
         }
         res.close();
